@@ -51,6 +51,7 @@ extension UILabel{
     override func recoverViewState(forced: Bool) {
         super.recoverViewState(forced: forced)
         startTransition { [weak self] in
+            self?.textColor = self?.labelState?.textColor
             self?.isUserInteractionEnabled = self?.labelState?.isUserInteractionsEnabled ?? false
         }
     }
